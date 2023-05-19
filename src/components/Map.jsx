@@ -22,7 +22,7 @@ export default function BingMap(props) {
       longitude: -122.42032247306807,
     },
     mapTypeId: "grayscale",
-    zoom: 12,
+    zoom: 10,
   }
   const [center, setCenter] = useState(defaultLocation);
   //search suggestion
@@ -105,7 +105,7 @@ export default function BingMap(props) {
             longitude: cord[1],
           },
           mapTypeId: "grayscale",
-          zoom: 12,
+          zoom: 15,
         })
         setIsSearching(true);
       })
