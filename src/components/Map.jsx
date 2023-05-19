@@ -69,7 +69,7 @@ export default function BingMap(props) {
   const addPushPins = (cord) => {
     setSuggestion([])
     fetch(
-      `https://data.sfgov.org/resource/rqzj-sfat.json?$select=facilitytype,applicant,location&status=APPROVED&$where=within_circle(location,${cord[0]},${cord[1]}, 5000)`
+      `https://data.sfgov.org/resource/rqzj-sfat.json?$select=facilitytype,applicant,location&status=APPROVED&$where=within_circle(location,${cord[0]},${cord[1]}, 500)`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -105,7 +105,7 @@ export default function BingMap(props) {
             longitude: cord[1],
           },
           // mapTypeId: "grayscale",
-          zoom: 12,
+          zoom: 14,
         })
         setIsSearching(true);
       })
