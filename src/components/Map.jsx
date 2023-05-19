@@ -21,7 +21,7 @@ export default function BingMap(props) {
       latitude: 37.766897602559155,
       longitude: -122.42032247306807,
     },
-    mapTypeId: "grayscale",
+    // mapTypeId: "grayscale",
     zoom: 10,
   }
   const [center, setCenter] = useState(defaultLocation);
@@ -104,7 +104,7 @@ export default function BingMap(props) {
             latitude: cord[0],
             longitude: cord[1],
           },
-          mapTypeId: "grayscale",
+          // mapTypeId: "grayscale",
           zoom: 15,
         })
         setIsSearching(true);
