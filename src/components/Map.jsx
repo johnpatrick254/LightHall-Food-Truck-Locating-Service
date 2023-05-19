@@ -69,7 +69,7 @@ export default function BingMap(props) {
   const addPushPins = (cord) => {
     setSuggestion([])
     fetch(
-      `https://data.sfgov.org/resource/rqzj-sfat.json?$select=facilitytype,applicant,location&status=APPROVED&$where=within_circle(location,${cord[0]},${cord[1]}, 500)`
+      `https://data.sfgov.org/resource/rqzj-sfat.json?$select=facilitytype,applicant,location&status=APPROVED&$where=within_circle(location,${cord[0]},${cord[1]}, 1000)`
     )
       .then((res) => res.json())
       .then((data) => {
