@@ -27,7 +27,7 @@ export default function BingMap(props) {
   const [center, setCenter] = useState(defaultLocation);
   //search suggestion
   const fetchSuggestion = async (query) => {
-    await fetch(`http://dev.virtualearth.net/REST/v1/Locations/${query}?maxResult=3&o=json&key=${env.KEY}`)
+    await fetch(`https://dev.virtualearth.net/REST/v1/Locations/${query}?maxResult=3&o=json&key=${env.KEY}`)
       .then((res) => res.json())
       .then((data) => {
         setSuggestion(data.resourceSets[0].resources);
@@ -40,7 +40,7 @@ export default function BingMap(props) {
   const handleSearch = (query) => {
     setLoading(true)
     setSuggestion([])
-    fetch(`http://dev.virtualearth.net/REST/v1/Locations/${query}?maxResult=3&o=json&key=${env.KEY}`)
+    fetch(`https://dev.virtualearth.net/REST/v1/Locations/${query}?maxResult=3&o=json&key=${env.KEY}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
