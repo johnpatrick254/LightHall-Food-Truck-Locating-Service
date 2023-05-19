@@ -105,7 +105,7 @@ export default function BingMap(props) {
             longitude: cord[1],
           },
           // mapTypeId: "grayscale",
-          zoom: 15,
+          zoom: 12,
         })
         setIsSearching(true);
       })
@@ -202,7 +202,7 @@ export default function BingMap(props) {
         pushPins={bingMapReady ? trucks : null}
         onMapReady={function () {
           setBingMapReady(true);
-          console.log("map is ready");
+          // console.log("map is ready");
         }}
         width="100%"
         viewOptions={center}
