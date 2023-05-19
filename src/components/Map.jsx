@@ -186,7 +186,7 @@ export default function BingMap(props) {
         </div>
       </div>
       <header>
-        <h1>Food Transport Locator</h1>
+        <h1>Food Truck Finder</h1>
       </header>
 
     {/* MAP COMPONENT */}
