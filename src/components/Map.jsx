@@ -61,7 +61,15 @@ export default function BingMap(props) {
         setIsSearching(true);
 
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        setSuggestion([])
+        setError(true)
+        setLoading(false)
+        setTimeout(() => {
+          setIsSearching(false);
+          setError(false)
+        }, 3000);
+        console.log(e)});
 
   }
 
@@ -123,7 +131,7 @@ export default function BingMap(props) {
 
     {/* ERROR MESSAGE */}
 
-      <p className={`error ${!isError && "hide"} `}>Location found!</p>
+      <p className={`error ${!isError && "hide"} `}>Location not found!</p>
 
     {/* BACK BUTTON */}
     
